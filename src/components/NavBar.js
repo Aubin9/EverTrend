@@ -1,14 +1,16 @@
 import React from "react";
 import { Nav, NavLink, NavMenu } from "./NavbarElements";
+import {} from "react-icons";
+import { FaShoppingCart, FaBell } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
+        <NavLink to="/" activeStyle>
+          EverTrend
+        </NavLink>
         <NavMenu>
-          <NavLink to="/" activeStyle>
-            EverTrend
-          </NavLink>
           <NavLink to="/product" activeStyle>
             Product
           </NavLink>
@@ -18,14 +20,14 @@ const Navbar = () => {
           <NavLink to="/categories" activeStyle>
             Categories
           </NavLink>
-          <NavLink to="/cart" activeStyle>
-            Carts
-          </NavLink>
           <NavLink to="/contact-us" activeStyle>
             Contact us
           </NavLink>
+          <NavLink to="/cart" activeStyle>
+            <FaShoppingCart />
+          </NavLink>
           <NavLink to="/notification" activeStyle>
-            Notification
+            <FaBell />
           </NavLink>
         </NavMenu>
       </Nav>
