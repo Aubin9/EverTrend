@@ -1,11 +1,17 @@
-import React from "react";
-import { Nav, NavLink, NavMenu } from "./NavbarElements";
+import React, { useState } from "react";
+import { Nav, NavLink, NavMenu, MobileIcon } from "./NavbarElements";
 import { useLocation } from "react-router-dom";
 import {} from "react-icons";
-import { FaShoppingCart, FaBell } from "react-icons/fa";
+import { FaShoppingCart, FaBell, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const handleClick = () => {
     if (location.pathname === "/") {
       window.scrollTo({
@@ -22,7 +28,10 @@ const Navbar = () => {
         <NavLink to="/" activeStyle>
           EverTrend
         </NavLink>
-        <NavMenu>
+        <MobileIcon onClick={toggleMenu}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </MobileIcon>
+        <NavMenu isOpen={isOpen}>
           <NavLink to="/" activeStyle>
             Product
           </NavLink>

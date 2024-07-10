@@ -156,7 +156,7 @@ const Home = () => {
                   className="buyBtn"
                 />
                 <div className="product-image">
-                  <img src={imageUrl} alt={title} width={50} height={50} />
+                  <img src={imageUrl} alt={title} width={10} height={10} />
                 </div>
               </SwiperSlide>
             );
