@@ -8,6 +8,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.2rem calc((90vw - 1000px) / 2);
   z-index: 12;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0;
 `;
 
 export const NavLink = styled(Link)`
