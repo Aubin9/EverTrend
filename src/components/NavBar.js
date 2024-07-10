@@ -22,6 +22,16 @@ const Navbar = () => {
       window.location.href = "/#new-arrivals";
     }
   };
+  const handleClick2 = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({
+        top: document.getElementById("feature-categories").offsetTop,
+        behavior: "smooth",
+      });
+    } else {
+      window.location.href = "/#feature-categories";
+    }
+  };
   return (
     <>
       <Nav>
@@ -35,10 +45,10 @@ const Navbar = () => {
           <NavLink to="/" activeStyle>
             Product
           </NavLink>
-          <NavLink to="/" onClick={handleClick} activeStyle>
+          <NavLink to="/shop" onClick={handleClick} activeStyle>
             Shop
           </NavLink>
-          <NavLink to="/categories" activeStyle>
+          <NavLink to="/" onClick={handleClick2} activeStyle>
             Categories
           </NavLink>
           <NavLink to="/cart" activeStyle>

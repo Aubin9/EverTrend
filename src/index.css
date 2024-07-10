@@ -253,3 +253,124 @@ body {
     grid-gap: 20px;
   }
 }
+
+/* Shopping card */
+.title-shopping {
+  color: var(--color-primary);
+  text-align: center;
+}
+.shopping-cart {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  height: 10px;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--color-gray);
+}
+
+.progress {
+  background: var(--color-green);
+  border-radius: 5px;
+  height: 10px;
+  transition: var(--transition);
+}
+
+.truck {
+  font-size: 20px;
+  margin-left: 5px;
+  transform: rotateX(-180deg);
+  transform: rotateY(180deg);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: var(--color-gray);
+  justify-content: space-between;
+}
+
+.cart-item img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.item-details {
+  /* flex-grow: 1; */
+  width: 30%;
+}
+
+.variation {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-control span {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.heart-icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.heart-icon.favorite {
+  color: var(--color-danger);
+}
+
+.remove-icon {
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-white);
+  top: 4px;
+  right: 4px;
+  background-color: var(--color-black);
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
