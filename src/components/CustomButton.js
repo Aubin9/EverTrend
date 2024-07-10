@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import { FaShoppingCart } from "react-icons/fa";
 
 const CustomButton = (props) => {
   const {
@@ -8,6 +9,7 @@ const CustomButton = (props) => {
     variant = "primary",
     disabled = false,
     className = "",
+    icon,
     ...otherProps
   } = props;
 
@@ -23,6 +25,8 @@ const CustomButton = (props) => {
       {...otherProps}
     >
       {text}
+      {icon ? <FaShoppingCart /> : ""}
+      {icon}
     </button>
   );
 };

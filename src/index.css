@@ -164,3 +164,37 @@ body {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
+
+/* New arrival */
+
+.arrival-title {
+  font-weight: 500;
+  margin-bottom: 0;
+  font-size: 1.7rem;
+  color: var(--color-primary);
+}
+
+.arrival-price {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  width: 100%;
+}
+.cartBtn {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: inline;
+  margin-left: 10px;
+}
+.arrival-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.grid {
+  background-color: var(--color-gray);
+  padding: 20px;
+}

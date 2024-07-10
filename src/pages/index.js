@@ -164,8 +164,47 @@ const Home = () => {
         </Swiper>
       </article>
       <article id="new-arrivals">
-        <h1>New arrivals</h1>
-        <h2>Currently in store with no shipment fee attached</h2>
+        <h1
+          style={{
+            width: "100%",
+            textAlign: "center",
+            fontSize: "3rem",
+            color: "var(--color-primary)",
+          }}
+        >
+          New arrivals
+        </h1>
+        <h2
+          style={{
+            width: "100%",
+            textAlign: "center",
+            color: "var(--color-primary)",
+          }}
+        >
+          Currently in store with no shipment fee attached
+        </h2>
+        <div className="arrival-categories">
+          {products.map(({ id, title, price, imageUrl }) => {
+            return (
+              <div key={id} class="grid">
+                <div className="product-image">
+                  <img src={imageUrl} alt={title} width={50} height={50} />
+                </div>
+                <div className="arrival-title">{title}</div>
+                <span className="arrival-price">N {price}</span>
+                <CustomButton
+                  text="Add to cart"
+                  onClick={() => {
+                    alert("you can add to carts");
+                  }}
+                  variant="primary"
+                  className="cartBtn"
+                  icon={true}
+                />
+              </div>
+            );
+          })}
+        </div>
       </article>
     </section>
   );
