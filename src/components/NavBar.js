@@ -45,7 +45,7 @@ const Navbar = () => {
           <NavLink to="/" activeStyle>
             Product
           </NavLink>
-          <NavLink to="/shop" onClick={handleClick} activeStyle>
+          <NavLink to="/" onClick={handleClick} activeStyle>
             Shop
           </NavLink>
           <NavLink to="/" onClick={handleClick2} activeStyle>
